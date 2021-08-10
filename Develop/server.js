@@ -15,10 +15,15 @@ app.use(require("./routes"));
 
 
 //Connecting to the mongodb locally (localhost mongo mongoose)
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/WorkoutDB", 
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
 
 app.listen(PORT, () => {

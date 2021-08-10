@@ -6,7 +6,7 @@ The project consists on creating a Workout Tracker. The scope covers the archite
 
 
 - [UserStory](#UserStory)
-- [AcceptanceCriteria] (#AcceptanceCriteria)
+- [AcceptanceCriteria](#AcceptanceCriteria)
 - [Screenshots](#Screenshots&Test)
 - [Demo](#Demo)
 
@@ -18,7 +18,7 @@ The project consists on creating a Workout Tracker. The scope covers the archite
 * As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
 
 
-## Accptance Criteria
+## Acceptance Criteria
 
 When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
 
