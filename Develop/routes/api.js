@@ -31,8 +31,8 @@ router.get("/workouts", (req, res) => {
             $addFields: { totalDuration: { $sum: "$exercises.duration" } } //here the excercise.duration is being added and returned in a new field called total duration
         }
     ])
-        .then((dbWorkouts) => {
-            res.json(dbWorkouts);
+        .then((workouts_db) => {
+            res.json(workouts_db);
         })
         .catch((err) => {
             res.json(err);
@@ -40,15 +40,14 @@ router.get("/workouts", (req, res) => {
 });
 
 
-// Goes to workout range results
+//Gets all workouts from the week
 router.get("/workouts/range", (req, res) => {
     db.Workout.aggregate([
         {
             $addFields: { totalDuration: { $sum: "$exercises.duration"} }
         }
     ])
-        // last workouts to have a defined range of data
-        .limit(7).then((dbWorkouts) => { res.json(dbWorkouts)})
+        .limit(7).then((workouts_db) => { res.json(workouts_db)})
         .catch((err) => {
             res.status(400).json(err);
         });
